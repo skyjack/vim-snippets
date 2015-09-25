@@ -18,11 +18,11 @@ snippet inc
 	#include <${1:stdio}.h>
 # #include "..."
 snippet Inc
-	#include "${1:`vim_snippets#Filename("$1.h")`}"
+	#include "${1:`vim_snippets#Filename("$1.hpp")`}"
 # ifndef...define...endif
 snippet ndef
 	#ifndef $1
-	#define ${1:SYMBOL} ${2:value}
+	#define ${1:SYMBOL} ${2:1}
 	#endif
 # define
 snippet def
@@ -39,7 +39,7 @@ snippet #if
 	#endif
 # header include guard
 snippet once
-	#ifndef ${1:`toupper(vim_snippets#Filename('$1_H', 'UNTITLED_H'))`}
+	#ifndef ${1:`toupper(vim_snippets#Filename('$1_H', 'UNTITLED_HPP'))`}
 
 	#define $1
 
